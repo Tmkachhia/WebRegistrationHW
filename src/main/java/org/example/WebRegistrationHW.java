@@ -97,7 +97,7 @@ public class WebRegistrationHW
 
 
         @Test
-        public void UserShouldAbleToRegisterSuccessfullyNext() throws InterruptedException
+        public void UserShouldAbleToRegisterSuccessfullyNext()
         {
             commonMethodToOpenBrowser();
             driver.get("https://www.next.co.uk/");
@@ -107,11 +107,7 @@ public class WebRegistrationHW
             select.selectByVisibleText("Mrs");
             driver.findElement(By.id("FirstName")).sendKeys("Tarjani");
             driver.findElement(By.id("LastName")).sendKeys("Kachhia");
-            try {
-                Thread.sleep(200);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+           
             driver.findElement(By.id("Email")).sendKeys("kachhiatarjani@gmail.com");
             driver.findElement(By.id("Password")).sendKeys("Abcd1234");
 
